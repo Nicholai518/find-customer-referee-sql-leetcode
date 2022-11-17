@@ -1,0 +1,12 @@
+1)
+SELECT name
+FROM customer
+WHERE id NOT IN
+(SELECT id
+FROM customer
+WHERE referee_id = 2)
+
+2)
+SELECT name
+FROM customer
+WHERE ifnull(referee_id, 1) <> 2;
